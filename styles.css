@@ -1,0 +1,131 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #ff4655;
+}
+
+#searchInput {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #333;
+}
+
+.superhero-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.superhero-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.superhero-card:hover {
+  transform: scale(1.05);
+}
+
+.superhero-card img {
+  width: 100%;
+  height: auto;
+}
+
+.superhero-name {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.superhero-details {
+  padding: 0 10px 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.fun-fact-box {
+  background-color: #1f1f1f;
+  border-left: 5px solid #ff4655;
+  padding: 1rem;
+  max-width: 600px;
+  margin: 3rem auto 1rem;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.fun-fact-box h2 {
+  margin-bottom: 0.5rem;
+  color: #ff4655;
+}
+
+#randomFact {
+  font-style: italic;
+  color: #ddd;
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #searchInput {
+    width: 90%;
+    font-size: 0.95rem;
+  }
+
+  .superhero-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    padding: 0 10px;
+  }
+
+  .superhero-details {
+    font-size: 0.85rem;
+  }
+
+  .fun-fact-box {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .superhero-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .superhero-details {
+    font-size: 0.8rem;
+  }
+
+  .fun-fact-box h2 {
+    font-size: 1.1rem;
+  }
+
+  .fun-fact-box {
+    margin: 2rem 1rem;
+  }
+}
